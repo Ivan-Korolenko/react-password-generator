@@ -1,0 +1,328 @@
+/*----------- BASE ---------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 1vw;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.hi {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vi {
+    opacity: 1 !important;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    outline: none;
+}
+
+button:hover,
+a button:hover,
+button:focus,
+a button:focus {
+    cursor: pointer;
+    outline: none;
+}
+
+
+/*----------- END BASE ---------------*/
+
+
+/*----------- COLORS ---------------*/
+
+.white {
+    color: white;
+}
+
+.black-back {
+    background-color: #333333;
+}
+
+*::selection {
+    background: #fff;
+    color: #483D8B;
+}
+
+*::-moz-selection {
+    background: #fff;
+    color: #483D8B;
+}
+
+
+/*----------- END COLORS ---------------*/
+
+
+/*----------- STYLES ---------------*/
+
+.app-container {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.app {
+    justify-content: center;
+    align-items: center;
+}
+
+.app-author {
+    margin: 0.5vw 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.app-author__link {
+    color: white;
+    outline: none;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+.app-author__link:hover {
+    color: #483D8B;
+}
+
+.app-h1 {
+    padding: 1vw 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.password-container {
+    border: 3px white solid;
+    border-radius: 25px;
+    background-color: #474747;
+    color: white;
+    padding: 1vw 4vw;
+    margin: 2vw 0;
+    font-size: 2rem;
+}
+
+.password {
+    outline: none;
+    border: 3px white solid;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    margin: 2vw 0;
+    font-size: 2rem;
+    text-align: center;
+    width: 50vw;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+input[type='text'].password:hover{
+    color: #483D8B;
+}
+
+.password-copy-message {
+    font-size: 1.5rem;
+    border: 2px white solid;
+    padding: 0.5vw;
+    border-radius: 15px;
+    background-color: #483D8B;
+    margin-bottom: 1vw;
+}
+    
+.create-pass-button {
+    border: 3px white solid;
+    border-radius: 25px;
+    background-color: #474747;
+    color: white;
+    padding: 1vw 4vw;
+    margin: 0 0;
+    width: 100%;
+    font-size: 2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.create-pass-button:hover {
+    background-color: #483D8B;
+}
+
+.length-input-container {
+   border: 3px white solid;
+    border-radius: 25px;
+    background-color: #474747;
+    color: white;
+    padding: 2vw 4vw;
+    margin: 2vw 0;
+    font-size: 2rem;
+}
+
+.length-input {
+    outline: none;
+    border: 3px white solid;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    padding: 0.5vw 1vw;
+    margin: 0 1vw 1vw;
+    font-size: 2rem;
+    text-align: center;
+    width: 10vw;
+    transition: color 0.3s ease-in-out;
+}
+
+.length-error-message {
+    font-size: 1.5rem;
+    margin-top: 1vw;
+    border: 2px white solid;
+    padding: 0.5vw;
+    border-radius: 15px;
+    background-color: #F44336;
+}
+
+
+/*----------- MOBILE ---------------*/
+
+@media screen and (max-width:1280px) and (orientation: landscape) {
+    html,
+    body {
+        font-size: 1.5vw;
+    }
+    .passgen-container {
+        width: 90%;
+    }
+    
+    .password {
+    margin: 2vw auto;
+    width: 100%;
+}
+    
+    .create-pass-button {
+    margin: 0 auto;
+}
+}
+
+@media screen and (max-width:1280px) and (orientation: portrait) {
+    html,
+    body {
+        font-size: 2vw;
+    }
+    .app-author {
+        margin: 1vw 0 0;
+        font-size: 2rem;
+    }
+    .app-h1 {
+        padding: 2vw 0 4vw;
+        font-size: 3rem;
+    }
+    
+    .passgen-container {
+        width: 90%;
+    }
+    
+    .password-container {
+    border: 2px white solid;
+    padding: 2vw 4vw;
+    margin: 4vw 0;
+}
+
+.password {
+    border: 1px white solid;
+    padding: 1vw 0;
+    margin: 4vw auto;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.password-copy-message {
+    font-size: 1.5rem;
+    border: 1px white solid;
+    padding: 1vw;
+    border-radius: 15px;
+    margin-bottom: 2vw;
+}
+    
+.create-pass-button {
+    border: 2px white solid;
+    padding: 2vw 4vw;
+    margin: 2vw auto;
+    font-size: 2rem;
+}
+
+.length-input-container {
+   border: 2px white solid;
+    padding: 4vw 4vw;
+    margin: 4vw 0;
+    font-size: 2rem;
+}
+
+.length-input {
+    border: 2px white solid;
+    padding: 1vw 2vw;
+    margin: 0 2vw 2vw;
+    font-size: 2rem;
+    width: 10vw;
+}
+    
+    .length-error-message {
+    font-size: 1.5rem;
+    margin-top: 2vw;
+    border: 1px white solid;
+    padding: 1vw;
+}
+    
+}
+
+
+/*----------- END MOBILE ---------------*/
+
+
+/*----------- END STYLES ---------------*/
